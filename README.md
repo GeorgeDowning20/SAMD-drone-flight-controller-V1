@@ -12,7 +12,9 @@ Ibus Serial rc link  (flysky)
 genreic 4 in one esc, and motors, 3 inch props,
 fully 3d printed frame
 
-it flew awfully, however it flew!! pretty awsome for a first project. 
+it flew awfully, however it flew!! pretty awsome for a first project.
+
+The project is called tcc_quickstart becasue at the time i didnt know to compile a project from sratch or to change the file name.
 
 21/01/2021:
 ![View recent photos](https://user-images.githubusercontent.com/105011415/210368437-4010299d-403d-48d4-9624-a42596cba304.jpeg)
