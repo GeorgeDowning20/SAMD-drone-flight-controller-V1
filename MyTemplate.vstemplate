@@ -1,0 +1,414 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>SAMD drone rate controller</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CandCPP</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SAMD drone rate controller</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="TCC_QUICK_START_CALLBACK4.cproj" File="TCC_QUICK_START_CALLBACK4.cproj" ReplaceParameters="true">
+      <Folder Name="libarm_cortexM0l_math" TargetFolderName="libarm_cortexM0l_math" />
+      <Folder Name="libm" TargetFolderName="libm" />
+      <Folder Name="src" TargetFolderName="src">
+        <Folder Name="ASF" TargetFolderName="ASF">
+          <Folder Name="common" TargetFolderName="common">
+            <Folder Name="boards" TargetFolderName="boards">
+              <ProjectItem ReplaceParameters="true" TargetFileName="board.h">board.h</ProjectItem>
+            </Folder>
+            <Folder Name="services" TargetFolderName="services">
+              <Folder Name="serial" TargetFolderName="serial">
+                <Folder Name="sam0_usart" TargetFolderName="sam0_usart">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="usart_serial.h">usart_serial.h</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="serial.h">serial.h</ProjectItem>
+              </Folder>
+            </Folder>
+            <Folder Name="utils" TargetFolderName="utils">
+              <Folder Name="interrupt" TargetFolderName="interrupt">
+                <ProjectItem ReplaceParameters="true" TargetFileName="interrupt_sam_nvic.c">interrupt_sam_nvic.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="interrupt_sam_nvic.h">interrupt_sam_nvic.h</ProjectItem>
+              </Folder>
+              <ProjectItem ReplaceParameters="true" TargetFileName="interrupt.h">interrupt.h</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="parts.h">parts.h</ProjectItem>
+            </Folder>
+          </Folder>
+          <Folder Name="common2" TargetFolderName="common2">
+            <Folder Name="services" TargetFolderName="services">
+              <Folder Name="delay" TargetFolderName="delay">
+                <Folder Name="sam0" TargetFolderName="sam0">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="systick_counter.c">systick_counter.c</ProjectItem>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="systick_counter.h">systick_counter.h</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="delay.h">delay.h</ProjectItem>
+              </Folder>
+            </Folder>
+          </Folder>
+          <Folder Name="sam0" TargetFolderName="sam0">
+            <Folder Name="boards" TargetFolderName="boards">
+              <Folder Name="samd21_xplained_pro" TargetFolderName="samd21_xplained_pro">
+                <ProjectItem ReplaceParameters="true" TargetFileName="board_init.c">board_init.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="samd21_xplained_pro.h">samd21_xplained_pro.h</ProjectItem>
+              </Folder>
+            </Folder>
+            <Folder Name="drivers" TargetFolderName="drivers">
+              <Folder Name="bod" TargetFolderName="bod">
+                <Folder Name="bod_sam_d_r_h" TargetFolderName="bod_sam_d_r_h">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="bod.c">bod.c</ProjectItem>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="bod_feature.h">bod_feature.h</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="bod.h">bod.h</ProjectItem>
+              </Folder>
+              <Folder Name="events" TargetFolderName="events">
+                <Folder Name="events_sam_d_r_h" TargetFolderName="events_sam_d_r_h">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="events.c">events.c</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="events.h">events.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="events_common.h">events_common.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="events_hooks.c">events_hooks.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="events_hooks.h">events_hooks.h</ProjectItem>
+              </Folder>
+              <Folder Name="extint" TargetFolderName="extint">
+                <Folder Name="extint_sam_d_r_h" TargetFolderName="extint_sam_d_r_h">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="extint.c">extint.c</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="extint.h">extint.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="extint_callback.c">extint_callback.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="extint_callback.h">extint_callback.h</ProjectItem>
+              </Folder>
+              <Folder Name="nvm" TargetFolderName="nvm">
+                <Folder Name="quick_start_basic" TargetFolderName="quick_start_basic">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="qs_nvm_basic.h">qs_nvm_basic.h</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="nvm.c">nvm.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="nvm.h">nvm.h</ProjectItem>
+              </Folder>
+              <Folder Name="port" TargetFolderName="port">
+                <Folder Name="quick_start" TargetFolderName="quick_start">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="qs_port_basic.h">qs_port_basic.h</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="port.c">port.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="port.h">port.h</ProjectItem>
+              </Folder>
+              <Folder Name="sercom" TargetFolderName="sercom">
+                <Folder Name="usart" TargetFolderName="usart">
+                  <Folder Name="quick_start" TargetFolderName="quick_start">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="qs_usart_basic_use.h">qs_usart_basic_use.h</ProjectItem>
+                  </Folder>
+                  <Folder Name="quick_start_callback" TargetFolderName="quick_start_callback">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="qs_usart_callback.h">qs_usart_callback.h</ProjectItem>
+                  </Folder>
+                  <Folder Name="quick_start_dma" TargetFolderName="quick_start_dma">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="qs_usart_dma_use.h">qs_usart_dma_use.h</ProjectItem>
+                  </Folder>
+                  <Folder Name="quick_start_lin" TargetFolderName="quick_start_lin">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="qs_lin.h">qs_lin.h</ProjectItem>
+                  </Folder>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="usart.c">usart.c</ProjectItem>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="usart.h">usart.h</ProjectItem>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="usart_interrupt.c">usart_interrupt.c</ProjectItem>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="usart_interrupt.h">usart_interrupt.h</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="sercom.c">sercom.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="sercom.h">sercom.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="sercom_interrupt.c">sercom_interrupt.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="sercom_interrupt.h">sercom_interrupt.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="sercom_pinout.h">sercom_pinout.h</ProjectItem>
+              </Folder>
+              <Folder Name="system" TargetFolderName="system">
+                <Folder Name="clock" TargetFolderName="clock">
+                  <Folder Name="clock_samd21_r21_da_ha1" TargetFolderName="clock_samd21_r21_da_ha1">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="clock.c">clock.c</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="clock_config_check.h">clock_config_check.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="clock_feature.h">clock_feature.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="gclk.c">gclk.c</ProjectItem>
+                  </Folder>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="clock.h">clock.h</ProjectItem>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="gclk.h">gclk.h</ProjectItem>
+                </Folder>
+                <Folder Name="interrupt" TargetFolderName="interrupt">
+                  <Folder Name="system_interrupt_samd21" TargetFolderName="system_interrupt_samd21">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="system_interrupt_features.h">system_interrupt_features.h</ProjectItem>
+                  </Folder>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="system_interrupt.c">system_interrupt.c</ProjectItem>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="system_interrupt.h">system_interrupt.h</ProjectItem>
+                </Folder>
+                <Folder Name="pinmux" TargetFolderName="pinmux">
+                  <Folder Name="quick_start" TargetFolderName="quick_start">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="qs_pinmux_basic.h">qs_pinmux_basic.h</ProjectItem>
+                  </Folder>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="pinmux.c">pinmux.c</ProjectItem>
+                  <ProjectItem ReplaceParameters="true" TargetFileName="pinmux.h">pinmux.h</ProjectItem>
+                </Folder>
+                <Folder Name="power" TargetFolderName="power">
+                  <Folder Name="power_sam_d_r_h" TargetFolderName="power_sam_d_r_h">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="power.h">power.h</ProjectItem>
+                  </Folder>
+                </Folder>
+                <Folder Name="reset" TargetFolderName="reset">
+                  <Folder Name="reset_sam_d_r_h" TargetFolderName="reset_sam_d_r_h">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="reset.h">reset.h</ProjectItem>
+                  </Folder>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="system.c">system.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="system.h">system.h</ProjectItem>
+              </Folder>
+              <Folder Name="tcc" TargetFolderName="tcc">
+                <Folder Name="quick_start" TargetFolderName="quick_start">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="qs_tcc_basic.h">qs_tcc_basic.h</ProjectItem>
+                </Folder>
+                <Folder Name="quick_start_buffering" TargetFolderName="quick_start_buffering">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="qs_tcc_buffering.h">qs_tcc_buffering.h</ProjectItem>
+                </Folder>
+                <Folder Name="quick_start_callback" TargetFolderName="quick_start_callback">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="qs_tcc_callback.h">qs_tcc_callback.h</ProjectItem>
+                </Folder>
+                <Folder Name="quick_start_dma" TargetFolderName="quick_start_dma">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="qs_tcc_dma.h">qs_tcc_dma.h</ProjectItem>
+                </Folder>
+                <Folder Name="quick_start_faultn" TargetFolderName="quick_start_faultn">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="qs_tcc_faultn.h">qs_tcc_faultn.h</ProjectItem>
+                </Folder>
+                <Folder Name="quick_start_faultx" TargetFolderName="quick_start_faultx">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="qs_tcc_faultx.h">qs_tcc_faultx.h</ProjectItem>
+                </Folder>
+                <Folder Name="quick_start_timer" TargetFolderName="quick_start_timer">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="qs_tcc_timer.h">qs_tcc_timer.h</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="tcc.c">tcc.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="tcc.h">tcc.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="tcc_callback.c">tcc_callback.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="tcc_callback.h">tcc_callback.h</ProjectItem>
+              </Folder>
+            </Folder>
+            <Folder Name="services" TargetFolderName="services">
+              <Folder Name="eeprom" TargetFolderName="eeprom">
+                <Folder Name="emulator" TargetFolderName="emulator">
+                  <Folder Name="main_array" TargetFolderName="main_array">
+                    <Folder Name="quick_start" TargetFolderName="quick_start">
+                      <ProjectItem ReplaceParameters="true" TargetFileName="qs_emulator_basic.h">qs_emulator_basic.h</ProjectItem>
+                    </Folder>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="eeprom.c">eeprom.c</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="eeprom.h">eeprom.h</ProjectItem>
+                  </Folder>
+                </Folder>
+              </Folder>
+            </Folder>
+            <Folder Name="utils" TargetFolderName="utils">
+              <Folder Name="cmsis" TargetFolderName="cmsis">
+                <Folder Name="samd21" TargetFolderName="samd21">
+                  <Folder Name="include" TargetFolderName="include">
+                    <Folder Name="component" TargetFolderName="component">
+                      <ProjectItem ReplaceParameters="true" TargetFileName="ac.h">ac.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="adc.h">adc.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="dac.h">dac.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="dmac.h">dmac.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="dsu.h">dsu.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="eic.h">eic.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="evsys.h">evsys.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="gclk.h">gclk.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="hmatrixb.h">hmatrixb.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="i2s.h">i2s.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="mtb.h">mtb.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="nvmctrl.h">nvmctrl.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="pac.h">pac.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="pm.h">pm.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="port.h">port.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="rtc.h">rtc.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sercom.h">sercom.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sysctrl.h">sysctrl.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tc.h">tc.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tcc.h">tcc.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tcc_lighting.h">tcc_lighting.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="usb.h">usb.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="wdt.h">wdt.h</ProjectItem>
+                    </Folder>
+                    <Folder Name="instance" TargetFolderName="instance">
+                      <ProjectItem ReplaceParameters="true" TargetFileName="ac.h">ac.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="ac1.h">ac1.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="adc.h">adc.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="dac.h">dac.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="dmac.h">dmac.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="dsu.h">dsu.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="eic.h">eic.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="evsys.h">evsys.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="gclk.h">gclk.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="i2s.h">i2s.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="mtb.h">mtb.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="nvmctrl.h">nvmctrl.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="pac0.h">pac0.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="pac1.h">pac1.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="pac2.h">pac2.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="pm.h">pm.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="port.h">port.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="rtc.h">rtc.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sbmatrix.h">sbmatrix.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sercom0.h">sercom0.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sercom1.h">sercom1.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sercom2.h">sercom2.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sercom3.h">sercom3.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sercom4.h">sercom4.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sercom5.h">sercom5.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="sysctrl.h">sysctrl.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tc3.h">tc3.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tc4.h">tc4.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tc5.h">tc5.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tc6.h">tc6.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tc7.h">tc7.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tcc0.h">tcc0.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tcc1.h">tcc1.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="tcc2.h">tcc2.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="usb.h">usb.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="wdt.h">wdt.h</ProjectItem>
+                    </Folder>
+                    <Folder Name="pio" TargetFolderName="pio">
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e15a.h">samd21e15a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e15b.h">samd21e15b.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e15bu.h">samd21e15bu.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e15l.h">samd21e15l.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e16a.h">samd21e16a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e16b.h">samd21e16b.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e16bu.h">samd21e16bu.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e16l.h">samd21e16l.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e17a.h">samd21e17a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21e18a.h">samd21e18a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g15a.h">samd21g15a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g15b.h">samd21g15b.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g15l.h">samd21g15l.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g16a.h">samd21g16a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g16b.h">samd21g16b.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g16l.h">samd21g16l.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g17a.h">samd21g17a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g17au.h">samd21g17au.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g18a.h">samd21g18a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21g18au.h">samd21g18au.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21j15a.h">samd21j15a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21j15b.h">samd21j15b.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21j16a.h">samd21j16a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21j16b.h">samd21j16b.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21j17a.h">samd21j17a.h</ProjectItem>
+                      <ProjectItem ReplaceParameters="true" TargetFileName="samd21j18a.h">samd21j18a.h</ProjectItem>
+                    </Folder>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21.h">samd21.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e15a.h">samd21e15a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e15b.h">samd21e15b.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e15bu.h">samd21e15bu.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e15l.h">samd21e15l.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e16a.h">samd21e16a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e16b.h">samd21e16b.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e16bu.h">samd21e16bu.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e16l.h">samd21e16l.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e17a.h">samd21e17a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21e18a.h">samd21e18a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g15a.h">samd21g15a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g15b.h">samd21g15b.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g15l.h">samd21g15l.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g16a.h">samd21g16a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g16b.h">samd21g16b.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g16l.h">samd21g16l.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g17a.h">samd21g17a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g17au.h">samd21g17au.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g18a.h">samd21g18a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21g18au.h">samd21g18au.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21j15a.h">samd21j15a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21j15b.h">samd21j15b.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21j16a.h">samd21j16a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21j16b.h">samd21j16b.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21j17a.h">samd21j17a.h</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="samd21j18a.h">samd21j18a.h</ProjectItem>
+                  </Folder>
+                  <Folder Name="source" TargetFolderName="source">
+                    <Folder Name="gcc" TargetFolderName="gcc">
+                      <ProjectItem ReplaceParameters="true" TargetFileName="startup_samd21.c">startup_samd21.c</ProjectItem>
+                    </Folder>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="system_samd21.c">system_samd21.c</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="system_samd21.h">system_samd21.h</ProjectItem>
+                  </Folder>
+                </Folder>
+              </Folder>
+              <Folder Name="header_files" TargetFolderName="header_files">
+                <ProjectItem ReplaceParameters="true" TargetFileName="io.h">io.h</ProjectItem>
+              </Folder>
+              <Folder Name="linker_scripts" TargetFolderName="linker_scripts">
+                <Folder Name="samd21" TargetFolderName="samd21">
+                  <Folder Name="gcc" TargetFolderName="gcc">
+                    <ProjectItem ReplaceParameters="false" TargetFileName="samd21j18a_flash.ld">samd21j18a_flash.ld</ProjectItem>
+                  </Folder>
+                </Folder>
+              </Folder>
+              <Folder Name="make" TargetFolderName="make">
+                <ProjectItem ReplaceParameters="false" TargetFileName="Makefile.sam.in">Makefile.sam.in</ProjectItem>
+              </Folder>
+              <Folder Name="preprocessor" TargetFolderName="preprocessor">
+                <ProjectItem ReplaceParameters="true" TargetFileName="mrecursion.h">mrecursion.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="mrepeat.h">mrepeat.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="preprocessor.h">preprocessor.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="stringz.h">stringz.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="tpaste.h">tpaste.h</ProjectItem>
+              </Folder>
+              <Folder Name="stdio" TargetFolderName="stdio">
+                <Folder Name="stdio_serial" TargetFolderName="stdio_serial">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="stdio_serial.h">stdio_serial.h</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="read.c">read.c</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="write.c">write.c</ProjectItem>
+              </Folder>
+              <Folder Name="syscalls" TargetFolderName="syscalls">
+                <Folder Name="gcc" TargetFolderName="gcc">
+                  <ProjectItem ReplaceParameters="true" TargetFileName="syscalls.c">syscalls.c</ProjectItem>
+                </Folder>
+              </Folder>
+              <ProjectItem ReplaceParameters="true" TargetFileName="compiler.h">compiler.h</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="status_codes.h">status_codes.h</ProjectItem>
+            </Folder>
+          </Folder>
+          <Folder Name="thirdparty" TargetFolderName="thirdparty">
+            <Folder Name="CMSIS" TargetFolderName="CMSIS">
+              <Folder Name="Include" TargetFolderName="Include">
+                <ProjectItem ReplaceParameters="true" TargetFileName="arm_math.h">arm_math.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="core_cm0plus.h">core_cm0plus.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="core_cmFunc.h">core_cmFunc.h</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="core_cmInstr.h">core_cmInstr.h</ProjectItem>
+              </Folder>
+              <Folder Name="Lib" TargetFolderName="Lib">
+                <Folder Name="GCC" TargetFolderName="GCC">
+                  <ProjectItem ReplaceParameters="false" TargetFileName="libarm_cortexM0l_math.a">libarm_cortexM0l_math.a</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="license.txt">license.txt</ProjectItem>
+              </Folder>
+              <ProjectItem ReplaceParameters="true" TargetFileName="ATMEL-disclaimer.txt">ATMEL-disclaimer.txt</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="CMSIS_END_USER_LICENCE_AGREEMENT.pdf">CMSIS_END_USER_LICENCE_AGREEMENT.pdf</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="README.txt">README.txt</ProjectItem>
+            </Folder>
+            <Folder Name="wireless" TargetFolderName="wireless">
+              <Folder Name="addons" TargetFolderName="addons">
+                <Folder Name="sio2host" TargetFolderName="sio2host">
+                  <Folder Name="uart" TargetFolderName="uart">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="sio2host.c">sio2host.c</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="sio2host.h">sio2host.h</ProjectItem>
+                  </Folder>
+                </Folder>
+              </Folder>
+            </Folder>
+          </Folder>
+        </Folder>
+        <Folder Name="config" TargetFolderName="config">
+          <ProjectItem ReplaceParameters="true" TargetFileName="conf_board.h">conf_board.h</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="conf_clocks.h">conf_clocks.h</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="conf_extint.h">conf_extint.h</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="conf_quick_start_callback.h">conf_quick_start_callback.h</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="conf_sio2host.h">conf_sio2host.h</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="asf.h">asf.h</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="qs_tcc_callback.c">qs_tcc_callback.c</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
